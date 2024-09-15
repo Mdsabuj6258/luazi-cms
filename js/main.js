@@ -2,7 +2,9 @@ $(function () {
 
     "use strict";
 
+    // nice select js
     $('.select_js').niceSelect();
+
 
     // menu js
     if ($(window).scrollTop() > 1) {
@@ -33,14 +35,11 @@ $(function () {
     });
 
 
-    // //=======COUNTER JS======
-    // $('.count').countUp();
-
-
     // venobox js
     $('.venobox').venobox();
 
-    //======BRAND SLIDER====== 
+
+    // brand slider
     $('.brand_slider').slick({
         slidesToShow: 7,
         slidesToScroll: 1,
@@ -71,13 +70,14 @@ $(function () {
             {
                 breakpoint: 576,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                 }
             }
         ]
     });
 
-    //======SERVICE SLIDER====== 
+
+    // service slider
     $('.service_slider').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -111,14 +111,14 @@ $(function () {
                 breakpoint: 576,
                 settings: {
                     slidesToShow: 1,
+                    arrows: false,
                 }
             }
         ]
     });
 
 
-
-    //======WARK SLIDER====== 
+    // work slider
     $('.wark_slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -152,13 +152,14 @@ $(function () {
                 breakpoint: 576,
                 settings: {
                     slidesToShow: 1,
+                    arrows: false,
                 }
             }
         ]
     });
 
 
-    //======TESTMONIAL SLIDER====== 
+    //= testimonial slider
     $('.testmonial_slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -192,21 +193,20 @@ $(function () {
                 breakpoint: 576,
                 settings: {
                     slidesToShow: 1,
+                    arrows: false,
                 }
             }
         ]
     });
 
-    // =======progrees bar=============
 
+    // progrees bar
     $(document).ready(function () {
         $(".progress-bar").ProgressBar();
     });
 
 
-
-
-    //======PRODUCT SLIDER====== 
+    // product slider
     $('.product_slider').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -246,10 +246,7 @@ $(function () {
     });
 
 
-
-
-
-
+    // product details slider
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -270,9 +267,10 @@ $(function () {
     });
 
 
-
-
-
+    // small device menu icon
+    $(".navbar-toggler").on("click", function () {
+        $(".navbar-toggler").toggleClass("show");
+    });
 
 });
 

@@ -77,6 +77,10 @@ textarea {
     border-radius: 3px;
     font-size: 16px;
     font-weight: 300;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 input::placeholder,
@@ -127,12 +131,15 @@ button {
     left: 0;
     Z-INDEX: -1;
     transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
 }
 
 .common_btn:hover::after {
     width: 100%;
 }
-
 
 .section_heading h5 {
     font-family: var(--paraFont);
@@ -174,8 +181,6 @@ button {
     font-weight: 700;
     text-transform: uppercase;
 }
-
-
 
 .title {
     color: var(--colorBlack);
@@ -223,6 +228,10 @@ button {
     position: absolute;
     top: -110px;
     right: 10px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
 }
 
 .prevArrow {
@@ -322,7 +331,6 @@ button {
 ======================================== */
 
 
-
 /* ========================================
     HOME PAGE START
 ======================================== */
@@ -373,10 +381,6 @@ header .header_left li:first-child::after {
     left: 185px;
 }
 
-header .header_right {}
-
-header .header_right .langauge {}
-
 header .nice-select {
     background-color: transparent;
     border: none;
@@ -404,7 +408,6 @@ header .current {
 }
 
 /* Header End */
-
 
 /* menu start */
 .main_menu {
@@ -482,6 +485,10 @@ header .current {
     padding: 14px;
     border-radius: 50%;
     margin-right: 15px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .main_menu .right_menu li .menu_cart:hover {
@@ -509,6 +516,8 @@ header .current {
     top: 100%;
     left: 0;
     width: 250px;
+    max-height: 550px;
+    overflow-y: auto;
     background: var(--colorWhite);
     line-height: 45px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -518,9 +527,25 @@ header .current {
     transform: scaleY(.5);
     transform-origin: top;
     opacity: 0;
+    z-index: 9;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+    -webkit-transform: scaleY(.5);
+    -moz-transform: scaleY(.5);
+    -ms-transform: scaleY(.5);
+    -o-transform: scaleY(.5);
 }
 
+.main_menu .droapdown_menu::-webkit-scrollbar {
+    width: 5px;
+    background: #ddd;
+}
 
+.main_menu .droapdown_menu::-webkit-scrollbar-thumb {
+    background: var(--colorPrimary);
+}
 
 .main_menu .droapdown_menu li a {
     width: 100%;
@@ -542,7 +567,6 @@ header .current {
 /* menu end*/
 
 /* banner start*/
-
 .banner {
     height: 100vh;
     overflow: hidden;
@@ -590,6 +614,9 @@ header .current {
     position: absolute;
     content: "";
     background: url(../images/banner_Shape.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     top: -15px;
     left: -5px;
     z-index: -1;
@@ -630,8 +657,6 @@ header .current {
     width: 90px;
 }
 
-.banner_text .brand_item a img {}
-
 .banner_text .brand_heading {
     color: var(--colorBlack);
     font-family: var(--headingFont);
@@ -670,6 +695,9 @@ header .current {
 
 .About_section .abut_left_text {
     background: url(../images/About_text_bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 147px;
     width: 300px;
     text-align: center;
@@ -718,6 +746,10 @@ header .current {
     border-radius: 50%;
     border: 1px solid rgba(23, 23, 24, 0.10);
     padding: 23px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .clint_service .clint_service_text {
@@ -744,9 +776,11 @@ header .current {
     width: 60px;
     overflow: hidden;
     border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
-
-.about_last .clint_text {}
 
 .about_last .clint_text h3 {
     font-size: 17px;
@@ -827,8 +861,6 @@ header .current {
 /* service end*/
 
 /* team start*/
-.team {}
-
 .team .section_heading {
     text-align: center;
 }
@@ -837,7 +869,6 @@ header .current {
     width: 50%;
     margin-left: 330px;
 }
-
 
 .team_item {
     margin-top: 25px;
@@ -853,14 +884,15 @@ header .current {
 .team_logo {
     position: absolute;
     background: url(../images/team_logo2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 60px;
     height: 60px;
     z-index: 1;
     bottom: 40px;
     right: 15px;
 }
-
-.team_item .team_item_link {}
 
 .team_item .team_item_link .link_show {
     position: absolute;
@@ -879,6 +911,10 @@ header .current {
     -moz-transition: all linear .3s;
     -ms-transition: all linear .3s;
     -o-transition: all linear .3s;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .team_item .team_item_link .link_hide {
@@ -893,7 +929,6 @@ header .current {
     -ms-transition: all linear .3s;
     -o-transition: all linear .3s;
 }
-
 
 .team_item_link .link_hide li a {
     color: var(--colorWhite);
@@ -910,6 +945,10 @@ header .current {
     -moz-transition: all linear .3s;
     -ms-transition: all linear .3s;
     -o-transition: all linear .3s;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .link_hide li a:hover {
@@ -930,11 +969,6 @@ header .current {
 .team_item .team_item_text p {
     font-size: 13px;
     font-weight: 600;
-}
-
-.team_item .team_item_text h3 {
-    /* font-size: 20px; */
-    /* font-weight: 700; */
 }
 
 /* team end*/
@@ -1014,6 +1048,10 @@ header .current {
     -moz-transform: rotate(320deg);
     -ms-transform: rotate(320deg);
     -o-transform: rotate(320deg);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .wark_item .wark_item_text .title:hover {
@@ -1062,7 +1100,6 @@ header .current {
     border-bottom: 1px solid rgba(23, 23, 24, 0.14);
     padding-bottom: 25px;
 }
-
 
 .porice_item .price_heading .price_icon {
     position: absolute;
@@ -1237,9 +1274,6 @@ header .current {
 /* testmonial end*/
 
 /* blog start*/
-
-.blog {}
-
 .blog .section_heading {
     text-align: center;
 }
@@ -1254,24 +1288,20 @@ header .current {
 .blog_item .blog_img {
     width: 370px;
     height: 250px;
+    overflow: hidden;
 }
 
 .blog_item:hover.blog_item .blog_img img {
-    overflow: hidden;
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-    -o-transform: scale(1.02);
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
 }
-
-.blog_item .blog_text {}
 
 .blog_item .blog_text .read_more {
     margin-bottom: 20px;
-
 }
-
 
 .blog_item .blog_text .category {
     margin-top: 20px;
@@ -1324,15 +1354,11 @@ header .current {
 
 /* footer_contact start*/
 .footer_contact_bg {
-    height: 190px;
-
+    padding: 50px 100px;
 }
 
 .footer_contact_text {
     position: relative;
-    text-align: center;
-    padding-top: 50px;
-    padding-left: 75px;
 }
 
 .footer_contact_text h2 {
@@ -1354,8 +1380,8 @@ header .current {
     text-align: center;
     padding: 13px;
     position: absolute;
-    right: 90px;
-    top: 70px;
+    right: 0;
+    top: 27px;
     transition: all linear .3s;
     -webkit-transition: all linear .3s;
     -moz-transition: all linear .3s;
@@ -1368,19 +1394,15 @@ header .current {
     color: var(--colorWhite);
 }
 
-
 /* footer_contact end*/
 
 
 /* footer start*/
-
 footer {
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
 }
-
-footer p {}
 
 .footer_info {
     width: 30%;
@@ -1407,8 +1429,6 @@ footer .footer_info form {
     position: relative;
     margin-bottom: 7px;
 }
-
-footer .footer_info form input {}
 
 footer .footer_info form button {
     width: 40px;
@@ -1473,8 +1493,6 @@ footer .footer_link h3 {
     margin-bottom: 40px;
 }
 
-footer .footer_link ul {}
-
 footer .footer_link ul li {
     align-items: center;
 }
@@ -1504,7 +1522,6 @@ footer .footer_contact_info_text a {
     font-size: 16px;
     font-weight: 600;
     margin-top: 7px;
-    text-transform: uppercase;
     font-family: var(--paraFont);
 }
 
@@ -1514,7 +1531,6 @@ footer .footer_contact_info p {
     font-weight: 600;
     text-transform: uppercase;
 }
-
 
 .footer_contact_info_img {
     height: 50px;
@@ -1531,7 +1547,6 @@ footer .footer_contact_info p {
 
 .footer_copyright {
     border-top: 1px solid rgba(255, 255, 255, 0.14);
-
 }
 
 .footer_copyright_text {
@@ -1543,13 +1558,11 @@ footer .footer_contact_info p {
     color: rgba(255, 255, 255, 0.70);
     font-size: 15px;
     font-weight: 500;
-
 }
 
 .footer_copyright_text ul {
     gap: 20px;
 }
-
 
 .footer_copyright_text ul li:last-child {
     border-left: 1px solid var(--colorWhite);
@@ -1569,17 +1582,11 @@ footer .footer_contact_info {
 }
 
 /* footer end*/
-
 .footer_contact_info ul {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-
-
-
-/* banner start*/
-/* banner end*/
 
 /* ========================================
     HOME PAGE END
@@ -1592,11 +1599,9 @@ footer .footer_contact_info {
     margin-top: 110px;
 }
 
-
 /* ========================================
     BREADCUMB PAGE START
 ======================================== */
-
 .breadcrumb_overlay {
     background: linear-gradient(90deg, #171718 0%, rgba(23, 23, 24, 0.60) 43.5%, rgba(23, 23, 24, 0.00) 100%);
     width: 100%;
@@ -1634,8 +1639,6 @@ footer .footer_contact_info {
     color: var(--colorWhite);
 }
 
-.bread_cumb_text ul li {}
-
 .bread_cumb_text ul li,
 .bread_cumb_text ul li a {
     position: relative;
@@ -1664,6 +1667,7 @@ footer .footer_contact_info {
     BREADCUMB PAGE END
 ======================================== */
 
+
 /* ========================================
     SERVICE PAGE START
 ======================================== */
@@ -1676,15 +1680,9 @@ footer .footer_contact_info {
     box-shadow: 0px 10px 50px 0px rgba(10, 37, 64, 0.10);
 }
 
-
-.pagenation_area {
-    /* margin-top: 60px; */
-}
-
 .pagenation_area nav ul {
     gap: 8px;
 }
-
 
 .pagenation_area nav ul li a {
     width: 40px;
@@ -1696,6 +1694,10 @@ footer .footer_contact_info {
     font-size: 15px;
     font-weight: 500;
     border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -ms-border-radius: 0 !important;
+    -o-border-radius: 0 !important;
 }
 
 .pagenation_area nav ul li a:hover,
@@ -1713,16 +1715,11 @@ footer .footer_contact_info {
 /* ========================================
     SERVICE DEATILS PAGE END
 ======================================== */
-
 .service_details_left_img {
     height: 370px;
     width: 850px;
     overflow: hidden;
-
 }
-
-.service_details_left_text {}
-
 
 .service_details_left_text h1,
 .service_details_left_text h2,
@@ -1782,7 +1779,6 @@ footer .footer_contact_info {
     margin: 60px 0;
 }
 
-
 .service_details_left_text .qatetion p {
     position: relative;
     color: var(--colorWhite);
@@ -1797,6 +1793,9 @@ footer .footer_contact_info {
     position: absolute;
     content: "";
     background: url(../images/qatetion_icon.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 45px;
     width: 55px;
     top: 0;
@@ -1817,7 +1816,6 @@ footer .footer_contact_info {
     font-weight: 700;
     line-height: 42px;
     position: relative;
-    /* 262.5% */
     padding-left: 30px;
 }
 
@@ -1841,10 +1839,6 @@ footer .footer_contact_info {
     top: 10px;
     left: 0;
 }
-
-.accordion_area {}
-
-.accordion_area .accordion_video {}
 
 .accordion_area .accordion_video .accordion_img {
     margin-top: 10px;
@@ -1943,8 +1937,6 @@ footer .footer_contact_info {
     left: 0;
 }
 
-
-
 .sidebar_search form {
     border: 1px solid rgba(23, 23, 24, 0.14);
     position: relative;
@@ -1955,7 +1947,6 @@ footer .footer_contact_info {
     font-family: var(--paraFont);
     font-size: 14px;
     font-weight: 500;
-
 }
 
 .sidebar_search form a {
@@ -1979,8 +1970,6 @@ footer .footer_contact_info {
     color: var(--colorWhite);
     background: var(--colorSecondary);
 }
-
-.sidebar_quality {}
 
 .sidebar_quality ul li {
     padding: 15px 0px;
@@ -2011,8 +2000,6 @@ footer .footer_contact_info {
 .sidebar_quality ul li a:hover {
     color: var(--colorPrimary);
 }
-
-
 
 .sidebar_brochures h2 {
     font-size: 20px;
@@ -2061,6 +2048,9 @@ footer .footer_contact_info {
     position: absolute;
     content: "";
     background: url(../images/get_and_tuch_Shape_01.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 240PX;
     width: 205PX;
     top: -72px;
@@ -2074,6 +2064,9 @@ footer .footer_contact_info {
     position: absolute;
     content: "";
     background: url(../images/get_and_tuch_Shape_02.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 160PX;
     width: 140PX;
     bottom: -5px;
@@ -2111,8 +2104,6 @@ footer .footer_contact_info {
     text-transform: uppercase;
 }
 
-.get_and_tech_text form {}
-
 .get_and_tuch_input {
     margin-top: 20px;
     box-shadow: 0px 4px 10px 0px rgba(4, 6, 24, 0.10);
@@ -2131,7 +2122,6 @@ footer .footer_contact_info {
     top: 15px;
     left: 0;
 }
-
 
 @keyframes left_right_animi {
     from {
@@ -2154,8 +2144,6 @@ footer .footer_contact_info {
 .get_and_tech_img {
     position: relative;
 }
-
-.get_and_tech_img {}
 
 .get_and_tech_img .text {
     position: absolute;
@@ -2212,11 +2200,9 @@ footer .footer_contact_info {
 ======================================== */
 
 
-
 /* ========================================
     PROTHFOLIO PAGE START
 ======================================== */
-
 /* prothfolio start */
 .proth_item {
     position: relative;
@@ -2236,7 +2222,6 @@ footer .footer_contact_info {
     position: absolute;
     width: 360px;
     text-align: left;
-    /* height: 120px; */
     padding: 20px 25px 25px 25px;
     right: 0;
     bottom: 0;
@@ -2381,10 +2366,6 @@ footer .footer_contact_info {
     margin-top: 30px;
 }
 
-.prothfolio_sidebar h3 {}
-
-.prothfolio_sidebar ul {}
-
 .prothfolio_sidebar ul li {
     display: flex;
     flex-wrap: wrap;
@@ -2398,8 +2379,6 @@ footer .footer_contact_info {
     border: none;
     margin-top: 10px;
 }
-
-.prothfolio_sidebar ul li {}
 
 .prothfolio_sidebar ul li h5 {
     font-size: 18px;
@@ -2429,6 +2408,10 @@ footer .footer_contact_info {
     -moz-transition: all linear .3s;
     -ms-transition: all linear .3s;
     -o-transition: all linear .3s;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .prothfolio_sidebar ul li a:hover {
@@ -2441,7 +2424,6 @@ footer .footer_contact_info {
 /*===================================
   PHOTO GALLERY START
 ===================================*/
-
 .photo_gallery_item {
     display: block;
     height: 530px;
@@ -2468,6 +2450,14 @@ footer .footer_contact_info {
     -moz-transition: all linear .3s;
     -ms-transition: all linear .3s;
     -o-transition: all linear .3s;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .photo_gallery_item:hover .icon {
@@ -2491,27 +2481,18 @@ footer .footer_contact_info {
 ===================================*/
 
 
-
-
-
 /* ========================================
     TEAM DETELS PAGE START
 ======================================== */
-.team_detels {}
-
 .team_detels .team_detels_item {
     padding: 20px 20px 40px 20px;
     border: 1px solid rgba(23, 23, 24, 0.14);
     margin-bottom: 20px;
 }
 
-.team_detels .team_detels_item {}
-
 .team_detels .team_detels_item .team_detels_img {
     height: 475px;
 }
-
-.team_detels .team_detels_item .team_detels_text {}
 
 .team_detels .team_detels_item .team_detels_text p {
     font-size: 13px;
@@ -2577,8 +2558,6 @@ footer .footer_contact_info {
 
 }
 
-.team_discription {}
-
 .team_discription p {
     font-size: 15px;
     font-weight: 500;
@@ -2639,16 +2618,12 @@ footer .footer_contact_info {
     margin-bottom: 10px;
 }
 
-.team_detels_content {}
-
 .team_detels_content h4 {
     font-size: 24px;
     font-weight: 700;
     text-transform: capitalize;
     margin-top: 55px;
 }
-
-.team_detels_content form {}
 
 .team_detels_content form .input {
     margin-top: 30px;
@@ -2705,7 +2680,6 @@ footer .footer_contact_info {
 /* ========================================
     VIDEO GALLERY PAGE START
 ======================================== */
-
 .video_gallery_item {
     height: 530px;
     position: relative;
@@ -2731,8 +2705,6 @@ footer .footer_contact_info {
 /* ========================================
     EVENT PAGE START
 ======================================== */
-.event {}
-
 .event .evevt_item {
     padding: 20px;
     margin-top: 25px;
@@ -2761,7 +2733,6 @@ footer .footer_contact_info {
     -ms-transition: all linear .3s;
     -o-transition: all linear .3s;
 }
-
 
 .event_text ul {
     gap: 15px;
@@ -2795,15 +2766,12 @@ footer .footer_contact_info {
     border-top: 1px solid rgba(23, 23, 24, 0.14);
 }
 
-.event_text p {}
-
 .event_text p span {
     display: inline-block;
     width: 15px;
     height: 18px;
     margin-right: 4px;
 }
-
 
 /* ========================================
     EVENT PAGE END
@@ -2813,9 +2781,6 @@ footer .footer_contact_info {
 /* ========================================
     EVENT DETELS PAGE START
 ======================================== */
-
-.event_details_page {}
-
 .event_details h2 {
     font-size: 30px;
     font-weight: 700;
@@ -2826,7 +2791,6 @@ footer .footer_contact_info {
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 20px;
-
 }
 
 .event_details .event_detels_img1 {
@@ -2835,19 +2799,9 @@ footer .footer_contact_info {
     overflow: hidden;
 }
 
-.event_detels_text1 {}
-
-.event_detels_text1 h2 {}
-
-.event_detels_text1 p {}
-
 .event_detels_text2 {
     margin-top: 60px;
 }
-
-.event_detels_text2 h2 {}
-
-.event_detels_text2 ul {}
 
 .event_detels_text2 ul li {
     font-size: 16px;
@@ -2879,8 +2833,6 @@ footer .footer_contact_info {
     top: 3px;
     left: -7px;
 }
-
-.event_detels_text2 p {}
 
 .event_detels_img2 {
     margin-top: 30px;
@@ -2920,8 +2872,6 @@ footer .footer_contact_info {
     width: 35px;
 }
 
-.event_details_page .network {}
-
 .event_details_page .network h2 {
     padding-top: 30px;
 }
@@ -2932,7 +2882,6 @@ footer .footer_contact_info {
 
 .event_details_page .network ul li {
     display: contents;
-
 }
 
 .event_details_page .network ul li a {
@@ -2948,15 +2897,15 @@ footer .footer_contact_info {
     -moz-transition: all linear .3s;
     -ms-transition: all linear .3s;
     -o-transition: all linear .3s;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .event_details_page .network ul li a:hover {
     background: var(--colorSecondary);
 }
-
-.event_details_page .sidebar_brochures {}
-
-.event_details_page .sidebar_brochures ul {}
 
 .event_details_page .sidebar_brochures ul li:first-child {
     border-bottom: 1px solid rgba(23, 23, 24, 0.14);
@@ -2977,6 +2926,9 @@ footer .footer_contact_info {
     position: absolute;
     content: "";
     background: url(../images/Download_icon.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 20px;
     width: 20px;
     top: 5px;
@@ -3026,9 +2978,6 @@ footer .footer_contact_info {
 /* ========================================
     SHOP PAGE START
 ======================================== */
-
-.shop_page {}
-
 .single_product {
     border: 1px solid rgba(23, 23, 24, 0.14);
     margin-top: 25px;
@@ -3099,7 +3048,6 @@ footer .footer_contact_info {
     margin-right: 5px;
 }
 
-
 .single_product_img .cart_btn {
     background: var(--colorBlack);
     font-size: 15px;
@@ -3157,21 +3105,9 @@ footer .footer_contact_info {
     margin-right: 10px;
 }
 
-.shop_page .pagenation_area {
-    /* margin-top: 30px; */
-}
-
-
-
-
-
-
-
-
 .product_modal .modal-dialog {
     max-width: 800px;
     position: relative;
-
 }
 
 .product_modal .modal-content {
@@ -3188,8 +3124,6 @@ footer .footer_contact_info {
     right: 20px;
     box-shadow: none;
 }
-
-.modal_text {}
 
 .modal_text .title {
     font-size: 28px;
@@ -3251,10 +3185,6 @@ footer .footer_contact_info {
     width: 50px;
     height: 50px;
 }
-
-.modal_text .count form h4 {}
-
-.modal_text .count form h4 span {}
 
 .modal_text .cart_btn {
     margin-top: 25px;
@@ -3324,6 +3254,10 @@ footer .footer_contact_info {
     -moz-transition: all linear .3s;
     -ms-transition: all linear .3s;
     -o-transition: all linear .3s;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .modal_text ul li a:hover {
@@ -3337,17 +3271,12 @@ footer .footer_contact_info {
 ======================================== */
 
 
-
 /* ========================================
     PRODUCT DETELS PAGE START
 ======================================== */
-.products_detels {}
-
 .product_detels_main_img {
     height: 529px;
     overflow: hidden;
-
-
 }
 
 .products_detels_text {
@@ -3410,8 +3339,6 @@ footer .footer_contact_info {
     background: var(--colorWhite);
     border: 1px solid rgb(23 23 24 / 15%);
 }
-
-.product_single_img {}
 
 .buy_btn {
     gap: 2px;
@@ -3526,8 +3453,6 @@ footer .footer_contact_info {
     font-weight: 500;
 }
 
-.product_detels_tabs .description_area ul {}
-
 .product_detels_tabs .description_area ol li,
 .product_detels_tabs .description_area ul li {
     font-size: 16px;
@@ -3559,8 +3484,6 @@ footer .footer_contact_info {
     left: 0px;
 }
 
-.product_detels_tabs .description_area .img_aria {}
-
 .product_detels_tabs .description_area .img_aria .img {
     height: 440px;
 }
@@ -3568,14 +3491,11 @@ footer .footer_contact_info {
 .product_detels_tabs .description_area .img_aria .text {
     padding-left: 100px;
     padding-top: 90px;
-
 }
 
 .product_detels_tabs .description_area .img_aria .text p {
     margin-top: 50px;
 }
-
-.product_detels_tabs .product_item {}
 
 .product_detels_tabs .product_item h2 {
     font-size: 40px;
@@ -3598,8 +3518,6 @@ footer .footer_contact_info {
     font-weight: 700;
     margin-bottom: 20px;
 }
-
-.product_detels_tabs .aditional_area ul {}
 
 .product_detels_tabs .aditional_area ul li {
     margin-top: 10px;
@@ -3696,12 +3614,6 @@ footer .footer_contact_info {
     font-weight: 500;
 }
 
-.product_detels_tabs .add_teview form {}
-
-.product_detels_tabs .add_teview form .input {}
-
-.product_detels_tabs .add_teview form .textarea {}
-
 .product_detels_tabs .add_teview form .button {
     margin-top: 30px;
 }
@@ -3718,7 +3630,6 @@ footer .footer_contact_info {
     margin-right: 10px;
     margin-bottom: 0;
 }
-
 
 .releted_product .single_product {
     margin: 0px 12px
@@ -3750,9 +3661,6 @@ footer .footer_contact_info {
 /* ========================================
     CAREER  PAGE START
 ======================================== */
-
-.career {}
-
 .career .career_item {
     padding: 40px;
     border: 1px solid rgba(23, 23, 24, 0.14);
@@ -3791,6 +3699,9 @@ footer .footer_contact_info {
     position: absolute;
     content: "";
     background: url(../images/career_icom.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 40px;
     width: 40px;
     top: -85px;
@@ -3818,13 +3729,10 @@ footer .footer_contact_info {
     CAREER  PAGE END
 ======================================== */
 
+
 /* ========================================
   JOB  CAREER  PAGE START
 ======================================== */
-
-
-.job_career {}
-
 .job_career .job_career_img_1 {
     height: 570px;
     overflow: hidden;
@@ -3951,13 +3859,10 @@ footer .footer_contact_info {
   JOB  CAREER  PAGE END
 ======================================== */
 
+
 /* ========================================
   JOB APPLY PAGE END
 ======================================== */
-.job_apply {}
-
-.job_apply .heading {}
-
 .job_apply .heading h3 {
     font-size: 26px;
     font-weight: 700;
@@ -3976,18 +3881,14 @@ footer .footer_contact_info {
     margin-bottom: 8px;
 }
 
-.job_apply form label {}
-
 /* ========================================
   JOB APPLY  PAGE END
-  ======================================== */
+======================================== */
 
 
 /* ========================================
-         FAQ  PAGE START
-  ======================================== */
-.faq {}
-
+    FAQ  PAGE START
+======================================== */
 .faq .faq_img {
     height: 565px;
     padding-right: 87px;
@@ -4011,7 +3912,6 @@ footer .footer_contact_info {
     -webkit-animation: left_right_animi linear 3s infinite alternate;
 }
 
-
 .faq .faq_img::before {
     position: absolute;
     content: "";
@@ -4027,8 +3927,6 @@ footer .footer_contact_info {
     animation: left_right_animi linear 3s infinite alternate;
     -webkit-animation: left_right_animi linear 3s infinite alternate;
 }
-
-.faq_text {}
 
 .faq_text .faq_heading h5 {
     font-size: 14px;
@@ -4048,7 +3946,6 @@ footer .footer_contact_info {
     font-family: var(--headingFont2);
     margin-top: 30px;
     margin-bottom: 45px;
-
 }
 
 .text .accordion-header {
@@ -4099,8 +3996,6 @@ footer .footer_contact_info {
     background-image: url(../images/minimus.png);
 }
 
-.faq_counter {}
-
 .faq_counter ul {
     justify-content: space-between;
     margin-top: 40px;
@@ -4138,6 +4033,10 @@ footer .footer_contact_info {
     height: 2px;
     background: var(--colorSecondary);
     transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
 }
 
 .faq_counter ul li:last-child::after {
@@ -4145,15 +4044,13 @@ footer .footer_contact_info {
 }
 
 /* ========================================
-       FAQ  PAGE END
-  ======================================== */
+    FAQ  PAGE END
+======================================== */
 
 
 /* ========================================
-        CONTACT  PAGE END
-  ======================================== */
-.contact_page {}
-
+    CONTACT  PAGE END
+======================================== */
 .contact_page .contact_text {
     margin-top: 70px;
 }
@@ -4172,8 +4069,6 @@ footer .footer_contact_info {
     margin-bottom: 30px;
     margin-top: 15px;
 }
-
-.contact_page form {}
 
 .contact_page form .input {
     margin-bottom: 20px;
@@ -4211,8 +4106,6 @@ iframe {
     color: var(--colorWhite);
 }
 
-.contact_map_area .cotact_info ul {}
-
 .contact_map_area .cotact_info ul li {
     display: flex;
     flex-wrap: wrap;
@@ -4228,6 +4121,10 @@ iframe {
     text-align: center;
     background: var(--colorPrimary);
     border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .contact_map_area .cotact_info ul li span img {
@@ -4300,18 +4197,16 @@ iframe {
 }
 
 /* ========================================
-        CONTACT  PAGE END
-  ======================================== */
+    CONTACT  PAGE END
+  ======================================= */
 
 
 /* ========================================
-        BLOG DETELS  PAGE END
-  ======================================== */
+    BLOG DETELS  PAGE END
+======================================== */
 .service_details_left_text .img_2 {
     margin-top: 30px;
 }
-
-.blog_details .img_text {}
 
 .blog_details .img_text h2 {
     font-size: 30px;
@@ -4351,8 +4246,6 @@ iframe {
     gap: 5px;
 }
 
-.blog_details .tag_area .tag_text li {}
-
 .blog_details .tag_area .tag_text li a {
     font-size: 13px;
     font-weight: 600;
@@ -4387,12 +4280,9 @@ iframe {
     gap: 5px;
 }
 
-.blog_details .tag_area .tag_icon li {}
-
 .blog_details .tag_area .tag_icon li a {
     display: inline-block;
 }
-
 
 .blog_details .member {
     border: 1px solid rgba(23, 23, 24, 0.14);
@@ -4414,7 +4304,7 @@ iframe {
     margin-bottom: 0px;
 }
 
-..blog_details .tag_area .tag_icon li span,
+.blog_details .tag_area .tag_icon li span,
 .blog_details .member .member_text span {
     font-size: 12px;
     font-weight: 600;
@@ -4440,8 +4330,6 @@ iframe {
     align-items: center;
     gap: 15px;
 }
-
-.comment_area ul li {}
 
 .comment_area p {
     font-size: 15px;
@@ -4478,5 +4366,5 @@ iframe {
 }
 
 /* ========================================
-        BLOG DETELS  PAGE END
-  ======================================== */
+    BLOG DETELS  PAGE END
+======================================== */
