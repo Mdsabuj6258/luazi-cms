@@ -52,19 +52,19 @@ $(function () {
             {
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 4,
                 }
             },
             {
                 breakpoint: 992,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 5,
                 }
             },
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 4,
                 }
             },
             {
@@ -93,6 +93,7 @@ $(function () {
                 breakpoint: 1200,
                 settings: {
                     slidesToShow: 2,
+
                 }
             },
             {
@@ -105,6 +106,7 @@ $(function () {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
+                    arrows: false,
                 }
             },
             {
@@ -146,6 +148,7 @@ $(function () {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
+                    arrows: false,
                 }
             },
             {
@@ -159,7 +162,7 @@ $(function () {
     });
 
 
-    //= testimonial slider
+    // testimonial slider
     $('.testmonial_slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -180,13 +183,14 @@ $(function () {
             {
                 breakpoint: 992,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                 }
             },
             {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
+                    arrows: false,
                 }
             },
             {
@@ -234,12 +238,14 @@ $(function () {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
+                    arrows: false,
                 }
             },
             {
                 breakpoint: 576,
                 settings: {
                     slidesToShow: 1,
+                    arrows: false,
                 }
             }
         ]
@@ -271,6 +277,17 @@ $(function () {
     $(".navbar-toggler").on("click", function () {
         $(".navbar-toggler").toggleClass("show");
     });
+
+    //  animation js
+    new WOW().init();
+
+
+
+
+
+
+
+
 
 });
 

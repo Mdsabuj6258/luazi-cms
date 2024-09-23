@@ -188,6 +188,7 @@ button {
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 15px;
+    display: block;
 }
 
 .title:hover {
@@ -322,6 +323,24 @@ button {
         -moz-transform: translateX(-40px);
         -ms-transform: translateX(-40px);
         -o-transform: translateX(-40px);
+    }
+}
+
+@keyframes roted_360 {
+    from {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
     }
 }
 
@@ -638,7 +657,6 @@ header .current {
 
 .banner_right .right_images {
     height: 812px;
-    width: 640px;
     overflow: hidden;
     margin-left: 50px;
 }
@@ -691,6 +709,8 @@ header .current {
     width: 145px;
     top: 260px;
     right: -45px;
+    animation: roted_360 linear 15s infinite alternate;
+    -webkit-animation: roted_360 linear 15s infinite alternate;
 }
 
 .About_section .abut_left_text {
@@ -738,6 +758,7 @@ header .current {
 .clint_service ul li {
     gap: 10px 20px;
     margin-top: 20px;
+    align-items: center;
 }
 
 .clint_service .clint_service_icon {
@@ -800,7 +821,6 @@ header .current {
 }
 
 .services_item {
-    height: 345px;
     background: var(--colorWhite);
     overflow: hidden;
     padding: 50px 35px;
@@ -873,12 +893,26 @@ header .current {
 .team_item {
     margin-top: 25px;
     position: relative;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.team_item:hover {
+    margin-top: 15px;
 }
 
 .team_item .team_item_img {
     height: 380px;
-    z-index: -1;
     overflow: hidden;
+    filter: grayscale(1);
+}
+
+.team_item_img :hover {
+    filter: unset;
+    -webkit-filter: unset;
 }
 
 .team_logo {
@@ -985,14 +1019,13 @@ header .current {
 
 .wark_item {
     position: relative;
-    margin-top: 60px;
+    margin: 60px 12px 0px 12px;
 }
 
 .wark_item .wark_item_img {
     height: 530px;
     overflow: hidden;
     position: relative;
-    width: 610px;
 }
 
 .wark_item .wark_item_text {
@@ -1094,6 +1127,12 @@ header .current {
     border: 1px solid rgba(23, 23, 24, 0.14);
     position: relative;
     padding: 50px 40px;
+    margin-top: 25px;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
 }
 
 .porice_item .price_heading {
@@ -1128,8 +1167,9 @@ header .current {
     color: var(--colorPrimary);
 }
 
-.porice_item {
-    margin-top: 25px;
+.porice_item:hover {
+    margin-top: 15px;
+    border-color: var(--colorBlack);
 }
 
 .porice_item ul {
@@ -1191,6 +1231,7 @@ header .current {
 /* testmonial start*/
 .tesmonial {
     background: #F9FCF2;
+    padding-left: 305px;
 }
 
 .tesmonial .custom_container {
@@ -1205,10 +1246,18 @@ header .current {
 .testmonial_item {
     position: relative;
     border: 1px solid rgba(23, 23, 24, 0.14);
-    background: #FFF;
+    background: var(--colorWhite);
     padding: 40px 50px;
-    margin-top: 60px;
-    width: 515px;
+    margin: 0px 12px;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.testmonial_item:hover {
+    border-color: var(--colorBlack);
 }
 
 .testmonial_logo {
@@ -1268,7 +1317,7 @@ header .current {
 .testmonial_slider .nextArrow,
 .testmonial_slider .prevArrow {
     margin-right: 300px;
-    margin-top: 60px;
+    margin-top: 0px;
 }
 
 /* testmonial end*/
@@ -1283,10 +1332,19 @@ header .current {
     border: 1px solid rgba(23, 23, 24, 0.14);
     position: relative;
     margin-top: 25px;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.blog_item:hover {
+    border-color: var(--colorBlack);
+    margin-top: 15px;
 }
 
 .blog_item .blog_img {
-    width: 370px;
     height: 250px;
     overflow: hidden;
 }
@@ -1317,7 +1375,6 @@ header .current {
 }
 
 .blog_item .blog_text .title {
-    width: 94%;
     margin-top: 10px;
     margin-bottom: 15px;
 }
@@ -1326,7 +1383,7 @@ header .current {
     position: absolute;
     background: var(--colorSecondary);
     top: 20px;
-    right: 24px;
+    right: 20px;
     padding: 5px;
     height: 75px;
     width: 70px;
@@ -1717,7 +1774,6 @@ footer .footer_contact_info {
 ======================================== */
 .service_details_left_img {
     height: 370px;
-    width: 850px;
     overflow: hidden;
 }
 
@@ -1842,9 +1898,14 @@ footer .footer_contact_info {
 
 .accordion_area .accordion_video .accordion_img {
     margin-top: 10px;
-    width: 850px;
     height: 450px;
     position: relative;
+}
+
+.accordion_area h3 {
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: 700;
 }
 
 .accordion_area .accordion_video .venobox {
@@ -2629,11 +2690,16 @@ footer .footer_contact_info {
     margin-top: 30px;
 }
 
-.team_detels_content form .chack_box {
+.form-check-input[type=checkbox] {
+    border-radius: .25em;
+    padding: 0;
+}
+
+.team_detels_content form .form-check {
     margin-top: 12px;
 }
 
-.team_detels_content form .chack_box .chack-box-input {
+.team_detels_content form .form-check .chack-box-input {
     width: 14px;
     height: 14px;
     padding: 0;
@@ -2762,6 +2828,7 @@ footer .footer_contact_info {
 .event_text .bottom {
     justify-content: space-between;
     margin-top: 30px;
+    align-items: center;
     padding-top: 20px;
     border-top: 1px solid rgba(23, 23, 24, 0.14);
 }
@@ -2986,6 +3053,7 @@ footer .footer_contact_info {
 .single_product_img {
     position: relative;
     overflow: hidden;
+    height: 325px;
     transition: all linear .3s;
     -webkit-transition: all linear .3s;
     -moz-transition: all linear .3s;
@@ -4206,6 +4274,7 @@ iframe {
 ======================================== */
 .service_details_left_text .img_2 {
     margin-top: 30px;
+    height: 540px;
 }
 
 .blog_details .img_text h2 {
@@ -4368,3 +4437,52 @@ iframe {
 /* ========================================
     BLOG DETELS  PAGE END
 ======================================== */
+
+
+
+
+
+
+@keyframes trin {
+
+    from {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+    20%,
+    32%,
+    44%,
+    56%,
+    68% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+    23%,
+    35%,
+    47%,
+    59%,
+    71% {
+        transform: rotate3d(0, 0, 1, 15deg);
+    }
+
+    26%,
+    38%,
+    50%,
+    62%,
+    74% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+    29%,
+    41%,
+    53%,
+    65%,
+    77% {
+        transform: rotate3d(0, 0, 1, -15deg);
+    }
+
+    80% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+}

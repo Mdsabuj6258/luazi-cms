@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/nice-select.css">
     <link rel="stylesheet" href="css/venobox.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/scroll_button.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/progress-bar.css">
     <link rel="stylesheet" href="css/spacing.css">
@@ -25,7 +27,7 @@
         <div class="container custom_container">
             <div class="row">
 
-                <div class="col-xl-6">
+                <div class="col-xl-6 col-lg-6 col-md-8 d-none d-md-block">
                     <ul class="header_left d-flex flex-wrap">
                         <li>
                             <a href="mailto:example@gmail.com">
@@ -44,7 +46,7 @@
                     </ul>
                 </div>
 
-                <div class="col-xl-6">
+                <div class="col-xl-6 col-lg-6 col-md-4">
                     <div class="header_right d-flex flex-wrap justify-content-end">
                         <div class="langauge">
                             <select class="select_js">
@@ -75,6 +77,7 @@
     </header>
     <!-- HEDER END -->
 
+
     <!-- MENU START -->
     <nav class="navbar navbar-expand-lg main_menu">
         <div class="container custom_container">
@@ -89,16 +92,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav m-auto">
                     <li class="nav-item">
-                        <a class="nav-link " href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="about.html">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="service.html">Service</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="portfolio.html">Portfolio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="shop.html">Shop</a>
@@ -110,10 +110,10 @@
                                 <a href="event.html">Event</a>
                             </li>
                             <li>
-                                <a href="service-details.html">Event Detels</a>
+                                <a href="service-details.html">Service Detels</a>
                             </li>
                             <li>
-                                <a href="blog_detels.html">Blog_detels</a>
+                                <a href="blog_detels.html">Blog detels</a>
                             </li>
                             <li>
                                 <a href="video_gallery.html">video Gallery</a>
@@ -148,6 +148,9 @@
                             <li>
                                 <a class="active" href="prothfolio-details.html">Prothfolio Detels</a>
                             </li>
+                            <li>
+                                <a href="portfolio.html">Prothfolio</a>
+                            </li>
                         </ul>
 
 
@@ -181,12 +184,12 @@
 
 
     <!-- BREAD CRUMB START -->
-    <section class="breadcrumb" style="background: url(images/breadcumb_bg.png);">
+    <section class="breadcrumb wow fadeInUp" style="background: url(images/breadcumb_bg.png);">
         <div class="breadcrumb_overlay">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
-                        <div class="bread_cumb_text">
+                        <div class="bread_cumb_text wow tada">
                             <h2>Prothfolio Details</h2>
                             <ul>
                                 <li><a href="#">Home</a></li>
@@ -204,12 +207,12 @@
     <section class="prothfolio_details mb_100">
         <div class="container">
             <div class="row">
-                <div class="col-xl-12">
+                <div class="col-xl-12 wow fadeInUp">
                     <div class="prothfolio_details_img mt_100">
                         <img src="images/prothfolio_Image_1.png" alt="image" class="img-fluid">
                     </div>
                 </div>
-                <div class="col-xl-8">
+                <div class="col-xl-8 col-lg-8 wow fadeInLeft">
                     <div class="prothfolio_details">
                         <div class="prothfolio_details_text">
                             <h2>Seeking information about this project.</h2>
@@ -237,21 +240,25 @@
                                 himenaeos. Phasellus neque magna, dignissim sit amet magna ac ultrices malesuada ante
                                 Curabitur ante lectus, consectetur quis risus nec iaculis est. Etiam molestie nisl felis
                                 nulla sollicitudin lectus maximu.</p>
-                            <div class="prothfolio_details_text_img">
-                                <div class="row">
-                                    <div class="col-xl-6"><img src="images/prothfolio_Image_2.png" alt="image"
-                                            class=" img-fluid"></div>
-                                    <div class="col-xl-6"> <img src="images/prothfolio_Image_3.png" alt="image"
-                                            class=" img-fluid"></div>
+
+                            <div class="row">
+                                <div class="col-xl-6 col-md-6 col-lg-6">
+                                    <div class="prothfolio_details_text_img">
+                                        <img src="images/prothfolio_Image_2.png" alt="image" class=" img-fluid">
+                                    </div>
                                 </div>
-
-
+                                <div class="col-xl-6 col-md-6 col-lg-6">
+                                    <div class="prothfolio_details_text_img">
+                                        <img src="images/prothfolio_Image_1.png" alt="image" class=" img-fluid">
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
 
                     </div>
                 </div>
-                <div class="col-xl-4">
+                <div class="col-xl-4 col-lg-4 wow fadeInRight">
                     <div class="prothfolio_sidebar">
                         <h3>Project Details:</h3>
                         <ul>
@@ -288,10 +295,11 @@
     <!-- SERVICE DETAILS END -->
 
 
+
     <!-- FOOTER  START -->
-    <footer style="background: url(images/footer_bg.png);">
+    <footer class="xs_pt_80" style="background: url(images/footer_bg.png)">
         <div class="container">
-            <ul class="d-flex flex-wrap">
+            <ul class=" footer_content d-flex flex-wrap wow fadeInUp">
                 <li class="footer_info">
                     <a href="#" class="footer_logo">
                         <img src="images/footer_logo.png" alt="footer logo" class="img-fluid">
@@ -386,9 +394,9 @@
                                 <img src="images/footer_icon2.png" alt="icon" class="img-fluid">
                             </div>
                             <div class="footer_contact_info_text">
-                                <p>Email:
+                                <p>Email
                                 </p>
-                                <a href="mailto:example@gmail.com">example@gmail.com:</a>
+                                <a href="mailto:example@gmail.com">example@gmail.com</a>
                             </div>
                         </li>
                         <li class=" d-flex flex-wrap">
@@ -404,7 +412,7 @@
                 </li>
             </ul>
         </div>
-        <div class="footer_copyright">
+        <div class="footer_copyright wow fadeInUp">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -427,6 +435,20 @@
     <!-- FOOTER  END -->
 
 
+    <!--================================
+    SCROLL BUTTON START
+    =================================-->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!--================================
+        SCROLL BUTTON END
+    =================================-->
+
+
+
     <!--jquery library js-->
     <script src="js/jquery-3.7.1.min.js"></script>
     <!--bootstrap js-->
@@ -437,6 +459,10 @@
     <script src="js/jquery.nice-select.min.js"></script>
     <!--venobox js-->
     <script src="js/venobox.min.js"></script>
+    <!--wow js-->
+    <script src="js/wow.min.js"></script>
+    <!--scroll button js-->
+    <script src="js/scroll_button.js"></script>
     <!--slick slideer js-->
     <script src="js/slick.min.js"></script>
     <!--counter up js-->
