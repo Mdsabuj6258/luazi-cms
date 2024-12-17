@@ -910,7 +910,7 @@ header .current {
     filter: grayscale(1);
 }
 
-.team_item_img :hover {
+.team_item_img:hover {
     filter: unset;
     -webkit-filter: unset;
 }
