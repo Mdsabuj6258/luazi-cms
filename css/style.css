@@ -3196,6 +3196,7 @@ footer .footer_contact_info {
 .modal_text .title {
     font-size: 28px;
     text-transform: capitalize;
+    font-family: var(--paraFont);
 }
 
 .modal_text p {
@@ -3216,6 +3217,10 @@ footer .footer_contact_info {
 
 .modal_text .count {
     margin-top: 15px;
+}
+
+.modal_text .count h4 {
+    font-family: var(--paraFont);
 }
 
 .modal_text .count h5 {
@@ -3315,6 +3320,7 @@ footer .footer_contact_info {
     border-radius: 50%;
     background: var(--colorPrimary);
     color: var(--colorWhite);
+    border: 1px solid var(--colorPrimary);
     text-align: center;
     margin-right: 10px;
     transition: all linear .3s;
